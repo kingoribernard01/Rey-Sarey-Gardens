@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rey Sarey Gardens</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              border: "hsl(var(--border))",
+              input: "hsl(var(--input))",
+              ring: "hsl(var(--ring))",
+              background: "hsl(var(--background))",
+              foreground: "hsl(var(--foreground))",
+              primary: {
+                DEFAULT: "#4a0404", // Deep Burgundy
+                foreground: "#ffffff",
+              },
+              secondary: {
+                DEFAULT: "#f9f5f0", // Cream
+                foreground: "#1a1a1a",
+              },
+              accent: {
+                DEFAULT: "#d4af37", // Gold
+                foreground: "#000000",
+              },
+              muted: {
+                DEFAULT: "#f3f4f6",
+                foreground: "#6b7280",
+              },
+              destructive: {
+                DEFAULT: "hsl(var(--destructive))",
+                foreground: "hsl(var(--destructive-foreground))",
+              },
+            },
+            fontFamily: {
+              serif: ['"Playfair Display"', 'serif'],
+              sans: ['"Lato"', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      :root {
+        --background: 0 0% 100%;
+        --foreground: 222.2 84% 4.9%;
+        --card: 0 0% 100%;
+        --card-foreground: 222.2 84% 4.9%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 222.2 84% 4.9%;
+        --primary: 355 90% 15%; /* Burgundy */
+        --primary-foreground: 210 40% 98%;
+        --secondary: 40 30% 96%; /* Cream */
+        --secondary-foreground: 222.2 47.4% 11.2%;
+        --muted: 210 40% 96.1%;
+        --muted-foreground: 215.4 16.3% 46.9%;
+        --accent: 45 65% 52%; /* Gold */
+        --accent-foreground: 222.2 47.4% 11.2%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 210 40% 98%;
+        --border: 214.3 31.8% 91.4%;
+        --input: 214.3 31.8% 91.4%;
+        --ring: 355 90% 15%;
+        --radius: 0.5rem;
+      }
+      body {
+        font-family: 'Lato', sans-serif;
+        background-color: #f9f5f0;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Playfair Display', serif;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "clsx": "https://aistudiocdn.com/clsx@^2.1.1",
+    "tailwind-merge": "https://aistudiocdn.com/tailwind-merge@^3.4.0",
+    "@radix-ui/react-slot": "https://aistudiocdn.com/@radix-ui/react-slot@^1.2.4",
+    "class-variance-authority": "https://aistudiocdn.com/class-variance-authority@^0.7.1",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.25",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
