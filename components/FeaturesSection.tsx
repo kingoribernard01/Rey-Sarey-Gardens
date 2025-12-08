@@ -29,7 +29,7 @@ const FeaturesSection = () => {
       subtitle: "Nature's Embrace",
       description: "Dine amidst lush greenery in our carefully manicured gardens. A breath of fresh air for brunch or lunch.",
       icon: <Check className="w-6 h-6 text-accent" />,
-      image: "https://images.unsplash.com/photo-1587815073078-f636169826e3?q=80&w=1974&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1578474843222-9593bc814220?q=80&w=1974&auto=format&fit=crop"
     },
     {
       id: 4,
@@ -40,6 +40,10 @@ const FeaturesSection = () => {
       image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop"
     }
   ];
+
+  const getTodayDate = () => {
+    return new Date().toISOString().split('T')[0];
+  };
 
   return (
     <div className="bg-white overflow-hidden">
@@ -250,11 +254,38 @@ const FeaturesSection = () => {
                             <div className="grid grid-cols-2 gap-4">
                                <div className="space-y-1">
                                   <label className="text-xs font-bold text-gray-600 uppercase">Date</label>
-                                  <input type="date" className="w-full border border-gray-200 bg-gray-50/50 rounded-lg p-3 focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none transition-all" required />
+                                  <input 
+                                    type="date" 
+                                    min={getTodayDate()}
+                                    className="w-full border border-gray-200 bg-gray-50/50 rounded-lg p-3 focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none transition-all cursor-pointer" 
+                                    required 
+                                    onClick={(e) => {
+                                      try {
+                                        if ('showPicker' in e.currentTarget) {
+                                          (e.currentTarget as any).showPicker();
+                                        }
+                                      } catch (error) {
+                                        console.log(error);
+                                      }
+                                    }}
+                                  />
                                </div>
                                <div className="space-y-1">
                                   <label className="text-xs font-bold text-gray-600 uppercase">Time</label>
-                                  <input type="time" className="w-full border border-gray-200 bg-gray-50/50 rounded-lg p-3 focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none transition-all" required />
+                                  <input 
+                                    type="time" 
+                                    className="w-full border border-gray-200 bg-gray-50/50 rounded-lg p-3 focus:ring-2 focus:ring-primary/10 focus:border-primary outline-none transition-all cursor-pointer" 
+                                    required 
+                                    onClick={(e) => {
+                                      try {
+                                        if ('showPicker' in e.currentTarget) {
+                                          (e.currentTarget as any).showPicker();
+                                        }
+                                      } catch (error) {
+                                        console.log(error);
+                                      }
+                                    }}
+                                  />
                                </div>
                             </div>
                             
